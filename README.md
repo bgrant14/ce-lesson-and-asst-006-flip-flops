@@ -18,4 +18,4 @@ Art acknowledgement: [taag](http://patorjk.com/software/taag/)
 4. Refer to the [criteria and guide](criteria-and-guide.md) for the different components of your submission.
 ---
 
-##Section 1: Capacitors
+## Section 1: Capacitors
