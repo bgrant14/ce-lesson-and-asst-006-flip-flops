@@ -33,5 +33,5 @@ The second part demonstrates that this process also works in the opposite direct
 
 ## Section 3: Clock Signal from the Microbit
 1. This experiment uses the microbit with a simple program to generate a clock signal that drives the LED. In the first part, the the clock frequency is set to 400ms (200ms low, and 200ms high). In the second part, the buttons on the microbit can be used to double or halve the frequency.
-2. [Video Demo of 3.2.2]()
-3. [Video Demo of 3.2.3]()
+2. [Video Demo of 3.2.2](https://i.imgur.com/tTOPdqc.mp4)
+3. [Video Demo of 3.2.3](https://i.imgur.com/ucOMod8.mp4)
