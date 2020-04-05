@@ -32,6 +32,12 @@ The second part demonstrates that this process also works in the opposite direct
 3. [Video Demo of 2.2.5](https://i.imgur.com/Oi8cfG8.mp4)
 
 ## Section 3: Clock Signal from the Microbit
-1. This experiment uses the microbit with a simple program to generate a clock signal that drives the LED. In the first part, the the clock frequency is set to 400ms (200ms low, and 200ms high). In the second part, the buttons on the microbit can be used to double or halve the frequency.
+1. This experiment uses the microbit with a simple program to generate a clock signal that drives the LED. In the first part, the clock frequency is set to 400ms (200ms low, and 200ms high). In the second part, the buttons on the microbit can be used to double or halve the frequency.
 2. [Video Demo of 3.2.2](https://i.imgur.com/tTOPdqc.mp4)
 3. [Video Demo of 3.2.3](https://i.imgur.com/ucOMod8.mp4)
+
+## Section 4: D-Type Flip-Flop
+1. In this experiment, the 74LS74 d-type flip-flop chip was tested. This chip was connected to 5V power and ground, the outputs Q and Q-prime were wired to LEDs, and the microbit clock to logic-level converter circuit constructed in section 3 was used as the clock input for the chip. The preset and clear pins were wired to the high voltage, so that the d-input would cause the ouput to change on the rising edge of the clock pulse. I added a button to the circuit to more easily change the d-input.
+2. [image]
+3. This shows the clock running at a slow rate to demonstrate that the ouput is only changed on the rising edge of the clock. [Video Demo of 4.2.6](https://i.imgur.com/kqopfRn.mp4)
+4. This shows the clock running much faster to show that at a higher clock speed the lag between the change of the input and the outputs is imperceptible. [Video Demo of 4.2.7](https://i.imgur.com/YpNDISR.mp4)
