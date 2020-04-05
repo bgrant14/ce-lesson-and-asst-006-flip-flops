@@ -41,4 +41,5 @@ The second part demonstrates that this process also works in the opposite direct
 2. 
 ![alt text](images/IMG_20200404_201225__01.jpg "Section 4 Circuit Diagram")
 3. This shows the clock running at a slow rate to demonstrate that the ouput is only changed on the rising edge of the clock. [Video Demo of 4.2.6](https://i.imgur.com/kqopfRn.mp4)
+
 4. This shows the clock running much faster to show that at a higher clock speed the lag between the change of the input and the outputs is imperceptible. [Video Demo of 4.2.7](https://i.imgur.com/YpNDISR.mp4)
