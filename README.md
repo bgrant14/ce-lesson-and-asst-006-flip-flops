@@ -47,14 +47,14 @@ The second part demonstrates that this process also works in the opposite direct
 ## Section 5: Reading Flip-Flop Output with the Microbit
 1. In this experiment, the microbit is used to set the clock speed, with the LED in the top left (0,0) of the pixel array representing the speed of the clock ticks. The 74LS74 chip is powered and the CLR and PRE pins are plugged into the 5V line, as in section 4. However, the LEDs from the previous experiment have been disconnected and the Q-prime output is now used as the D input which causes the output to flip to its opposite at the beggining of the next clock cycle. The Q output is connected to the LLC, which is then sent to the microbit as a 3.3V signal. The microbit reads this signal from pin 2 and uses the on-pulsed event handler to control the LED below the clock speed indicator (0,1). This LED turns on when it detects a high voltage and turns off when it detects a low voltage.
 2. Section 4.1 Questions:
-  * In a program, an *event* is an input that causes a subroutine in the program to execute, and an *event handler* is a function that detects the input event and ensures that the subroutine runs as a result. *Asynchronous execution* is a type of programming that causes parts of a program to execute separately from the main function.
-  * The onPulsed function is similar to the onButtonPressed and onGesture functions that have been used in previous projects.
-  * In this case, the event being handled is the "pulse," or the rising and falling voltage output by the flip flop.
-  * The event handler is the onPulsed function, which is reading the digital pin and executing a function based on this input.
-  * The events that can be specified by the event handler are a high voltage reading and a low voltage reading.
-  * The second argument of onPulsed should be specified as high or low.
+    1. In a program, an *event* is an input that causes a subroutine in the program to execute, and an *event handler* is a function that detects the input event and ensures that the subroutine runs as a result. *Asynchronous execution* is a type of programming that causes parts of a program to execute separately from the main function.
+    2. The onPulsed function is similar to the onButtonPressed and onGesture functions that have been used in previous projects.
+    3. In this case, the event being handled is the "pulse," or the rising and falling voltage output by the flip flop.
+    4. The event handler is the onPulsed function, which is reading the digital pin and executing a function based on this input.
+    5. The events that can be specified by the event handler are a high voltage reading and a low voltage reading.
+    6. The second argument of onPulsed should be specified as high or low.
 3. Section 4.2 Questions:
-  * With this set up, the Q output of the flip flop changes at half the rate of the clock speed. On the rising edge of the clock's square wave, the output changes to its opposite and it changes back on the next rising edge.
+    1. With this set up, the Q output of the flip flop changes at half the rate of the clock speed. On the rising edge of the clock's square wave, the output changes to its opposite and it changes back on the next rising edge.
 4.
 ![alt text](images/IMG_20200410_155506.jpg "Section 5 Circuit Diagram")
 
