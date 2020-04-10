@@ -63,5 +63,4 @@ The second part demonstrates that this process also works in the opposite direct
 ## Section 6: 3-bit Counter
 1.
 2. Section 5.1 Questions:
-  1. A mod-n counter has 2^n possible output states.
-  2. 
+    1. A mod-n counter has 2^n possible output states. 
