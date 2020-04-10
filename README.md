@@ -37,9 +37,25 @@ The second part demonstrates that this process also works in the opposite direct
 3. [Video Demo of 3.2.3](https://i.imgur.com/ucOMod8.mp4)
 
 ## Section 4: D-Type Flip-Flop
-1. In this experiment, the 74LS74 d-type flip-flop chip was tested. This chip was connected to 5V power and ground, the outputs Q and Q-prime were wired to LEDs, and the microbit clock to logic-level converter circuit constructed in section 3 was used as the clock input for the chip. The preset and clear pins were wired to the high voltage, so that the d-input would cause the ouput to change on the rising edge of the clock pulse. I added a button to the circuit to more easily change the d-input.
+1. In this experiment, the 74LS74 d-type flip-flop chip was tested. This chip was connected to 5V power and ground, the outputs Q and Q-prime were wired to LEDs, and the microbit clock to logic-level converter (LLC) circuit constructed in section 3 was used as the clock input for the chip. The preset and clear pins were wired to the high voltage, so that the d-input would cause the ouput to change on the rising edge of the clock pulse. I added a button to the circuit to more easily change the d-input.
 2. 
-![alt text](images/IMG_20200404_201225__01.jpg "Section 4 Circuit Diagram")
+![alt text](images/IMG_20200410_155458.jpg "Section 4 Circuit Diagram")
 
 3. This shows the clock running at a slow rate to demonstrate that the ouput is only changed on the rising edge of the clock. [Video Demo of 4.2.6](https://i.imgur.com/kqopfRn.mp4)
 4. This shows the clock running much faster to show that at a higher clock speed the lag between the change of the input and the outputs is imperceptible. [Video Demo of 4.2.7](https://i.imgur.com/YpNDISR.mp4)
+
+## Section 5: Reading Flip-Flop Output with the Microbit
+1. In this experiment, the microbit is used to set the clock speed, with the LED in the top left (0,0) of the pixel array representing the speed of the clock ticks. The 74LS74 chip is powered and the CLR and PRE pins are plugged into the 5V line, as in section 4. However, the LEDs from the previous experiment have been disconnected and the Q-prime output is now used as the D input which causes the output to flip to its opposite at the beggining of the next clock cycle. The Q output is connected to the LLC, which is then sent to the microbit as a 3.3V signal. The microbit reads this signal from pin 2 and uses the on-pulsed event handler to control the LED below the clock speed indicator (0,1). This LED turns on when it detects a high voltage and turns off when it detects a low voltage.
+2. In a program, an *event* is an input that causes a subroutine in the program to execute, and an *event handler* is a function that detects the input event and ensures that the subroutine runs as a result. *Asynchronous execution* is a type of programming that causes parts of a program to execute separately from the main function.
+The onPulsed function is similar to the onButtonPressed and onGesture functions that have been used in previous projects.
+In this case, the event being handled is the "pulse," or the rising and falling voltage output by the flip flop.
+The event handler is the onPulsed function, which is reading the digital pin and executing a function based on this input.
+The events that can be specified by the event handler are a high voltage reading and a low voltage reading.
+The second argument of onPulsed should be specified as high or low.
+3. With this set up, the Q output of the flip flop changes at half the rate of the clock speed. On the rising edge of the clock's square wave, the output changes to its opposite and it changes back on the next rising edge.
+4.
+![alt text](images/IMG_20200410_155506.jpg "Section 5 Circuit Diagram")
+
+5. [Video Demo of 5.2.4](https://i.imgur.com/rgeVcCj.mp4)
+
+## Section 6: 3-bit Counter
