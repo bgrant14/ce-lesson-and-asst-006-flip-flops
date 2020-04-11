@@ -77,3 +77,19 @@ The second part demonstrates that this process also works in the opposite direct
 ![alt text](images/IMG_20200410_230232__01.jpg "Section 6 Circuit Diagram")
 
 5. [Video Demo of 6.2.6](https://i.imgur.com/6gScT4X.mp4)
+
+## Section 7: Decoded Binary-to-Decimal Microbit Output
+1. This experiment simply built on the software of the previous one. The pin event functions were changed to read low pulses as 0s and high pulses as 1s. A bin2dec() function was added to decode these binary pin values and display a decimal number. And finally, a second forever loop was added to continuously run the bin2dec() function without being interrupted by the basic.pause() functions in the other forever loop.
+2. Section 7.1 Questions:
+    1. A 8 binary bits can represent 0-7, meaning they can be represented by one decimal digit.
+    2. An event is some asynchronous input that causes the state of the program to change. The event handler is constantly polling, or "listening" for this asynchronous input so that it does not miss the input while it is executing other instructions.
+    3. The microbit achieves the illusion of executing multiple instructions at the same time by executing millions of instructions per second and thus being able to alternate among many different sets of instructions one after another in quick succession.
+    4. The scheduler determines which subprograms will be run, in what sequence, and when to wake a function that is "sleeping."
+    5. Using two separate forever loops allows the clock to be handled by the basic.pause() function without interrupting the exection of the bin2dec() function. With two forever loops, the scheduler is able to continuously run the bin2dec function and also watch the sleep timers and send the clock signals at the right time.
+ 3. Section 7.2 Questions:
+    1. At the default 400 microsecond clock speed, the output does not display correctly: some numbers are skipped.
+    2. Yes, at 400 microseconds, some numbers are displayed noticeably longer than others.
+    3. The skew is no longer noticeable after halving the clock speed a couple of times. This is because with some extra time the program has enough time to display the current number and change to the next one. At the faster clock speeds, the program is still displaying the previous number when it receives the signal that it needs to change to the next one.
+    4. The LED does not blink evenly with the clock because the basic.showNumber() function plots and unplots the (0,0) LED separately from the led.plot() and led.unplot() commands in the forever loop.
+    5. Separating the functions into serparate forever loops causes the scheduler to continuously flip back and forth between checking sleep timer and running the bin2dec() function. If there was one forever loop that did not use the sleep function, but instead continuously checked the runtime of the program, some of the synchronization problems may be solved.
+4. [Video Demo of 7.2.2]()
