@@ -92,4 +92,4 @@ The second part demonstrates that this process also works in the opposite direct
     3. The skew is no longer noticeable after halving the clock speed a couple of times. This is because with some extra time the program has enough time to display the current number and change to the next one. At the faster clock speeds, the program is still displaying the previous number when it receives the signal that it needs to change to the next one.
     4. The LED does not blink evenly with the clock because the basic.showNumber() function plots and unplots the (0,0) LED separately from the led.plot() and led.unplot() commands in the forever loop.
     5. Separating the functions into serparate forever loops causes the scheduler to continuously flip back and forth between checking sleep timer and running the bin2dec() function. If there was one forever loop that did not use the sleep function, but instead continuously checked the runtime of the program, some of the synchronization problems may be solved.
-4. [Video Demo of 7.2.2]()
+4. [Video Demo of 7.2.2](https://i.imgur.com/fZD4UlV.mp4)
