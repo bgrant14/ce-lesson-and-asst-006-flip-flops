@@ -74,4 +74,6 @@ The second part demonstrates that this process also works in the opposite direct
     2. The high and low pulse events at which the LED was triggered in the previous experiment, are also the events that will trigger the LEDs in this experiment.
     3. The circuit does produce a 3-bit mod-8 counter. The code running on the microbit displays the inputs as counting upward, however connecting three LEDs directly to the ouputs shows the outputs counting downward. After experimenting with the circuit, I have concluded that the microbit is displaying the inverse of the output that it is receiving. Given that the code is set to unplot an LED on a low pulse, and plot an LED on a high pulse, I am not sure why this is. The direction of the counting is not effected by switching the circuit on and off repeatedly because the starting conditions are the same each time as PRE and CLR connected to the 5V line. To display counting in the opposite direction, the ouput LEDs must be connected to Q-prime.
 4.
+![alt text](images/IMG_20200410_230232__01.jpg "Section 6 Circuit Diagram")
+
 5. [Video Demo of 6.2.6](https://i.imgur.com/6gScT4X.mp4)
