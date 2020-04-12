@@ -93,3 +93,17 @@ The second part demonstrates that this process also works in the opposite direct
     4. The LED does not blink evenly with the clock because the basic.showNumber() function plots and unplots the (0,0) LED separately from the led.plot() and led.unplot() commands in the forever loop.
     5. Separating the functions into serparate forever loops causes the scheduler to continuously flip back and forth between checking sleep timer and running the bin2dec() function. If there was one forever loop that did not use the sleep function, but instead continuously checked the runtime of the program, some of the synchronization problems may be solved.
 4. [Video Demo of 7.2.2](https://i.imgur.com/fZD4UlV.mp4)
+
+## Section 8: Flip Flop Control Signals
+1. In this experiment, a high digital write is added to pin 8 to which is connected through the LLC to the **/CLR** lines of the 74LS74 chips. When A and B are pressed simultaneously, a brief low signal is sent to reset the chips to their starting state. This adds some extra control in case the chips start in an unusual state.
+2. Section 8.1 Questions:
+    1. The description explains the function of the **/PRE** and **/CLR**, and explains their effect on the output.
+    2. The function table shows that when the **/PRE** and **/CLR** inputs are not both set to high, the other inputs are not relevant. The table represents this with X's.
+    3. These pins are active low, because the high signal that is used to activate them is inverted. This is represented by the bar over them.
+    4. The function table shows all of the possible outputs for **/PRE** and **/CLR**, it says that low and high result in Q whereas high and low result in Q-prime.
+3. Section 8.2 Questions:
+    1. Grounding the pin still connected to the microbit ensures that the input voltage will be low.
+    2. My code sets the pin's output to "1" at the beginning and briefly sets it to zero when the buttons are pressed.
+    3. The counter still appears to count in the same way, upward on the microbit.
+    4. The program works. When A and B are pressed, the microbit's display shows "7," indicating that all of the Q outputs are high. Then the counter starts from 0, counting upward.
+4. [Video Demo of 8.2.6](https://i.imgur.com/t80oBJj.mp4)
